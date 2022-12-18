@@ -8,7 +8,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     min-height: 100vh;
 }
 
@@ -83,7 +83,9 @@ li:hover {
     grid-auto-rows: min-content;
 }
 
-.project-card, .announcements-content {
+.project-card, 
+.announcements-content,
+.trending-content {
     background-color: #ffffff;
     border-radius: 0.5rem;
     height: 180px;
@@ -91,8 +93,8 @@ li:hover {
     grid-template-columns: 10px auto;
     box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
     overflow: hidden;
-
 }
+
 .folder-decor {
     background-color: #f0b429;
 }
@@ -134,7 +136,7 @@ li:hover {
 .announcements, .trending {
     display: grid;
     gap: 1rem;
-    grid-template-rows: 1rem;
+    grid-template-rows: 0.8rem;
 }
 
 .announcements-header,
@@ -142,7 +144,8 @@ li:hover {
     font-weight: 800;
 }
 
-.announcements-content {
+.announcements-content,
+.trending-content {
     display: grid;
     gap: 1.2rem;
     grid-template-columns: 1fr;
@@ -157,8 +160,12 @@ li:hover {
     
 }
 
+.announce-card:last-child{
+    border-bottom: none;
+}
+
 .announce-card-header {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 800;
     white-space: nowrap;
     overflow: hidden;
@@ -169,4 +176,39 @@ li:hover {
     font-size: 0.8rem;
     color: rgb(0 0 0 / 0.6);
     margin-bottom: 0.5rem;
+}
+
+.trending-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+}
+
+.trending-card-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 0.75rem;
+    gap: .2rem;
+}
+
+.trending-card-username {
+    color:rgb(0 0 0 / 0.7);
+    font-weight: 600;
+    align-self: end;
+}
+
+.trending-card-badge {
+    color:rgb(0 0 0 / 0.6);
+}
+
+.trending-card img {
+    max-width:100%;
+    height: 100%;
+}
+
+.trending-card-userpic {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 40px;
+    width: 40px;
 }
